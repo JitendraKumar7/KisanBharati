@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:background="@color/tab_logo_color"
+            android:gravity="center|center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comment "
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <EditText
+                android:id="@+id/edt_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_user_bg"
+                android:gravity="top"
+                android:hint="Your suggestions..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="5dp"
+                android:textColor="#124a6f"
+                android:textColorHint="#77052f80"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/chkLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/tab_logo_color"
+            android:gravity="center|center_vertical"
+            android:weightSum="2">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:background="@color/tab_logo_color"
+                android:text="send"
+                android:textColor="@color/white" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/tab_logo_color"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

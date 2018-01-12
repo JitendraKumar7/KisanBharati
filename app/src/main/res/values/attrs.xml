@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="loader_view">
+        <attr name="width_weight" format="float" />
+        <attr name="height_weight" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
+        <attr name="ms_arrow_tint" format="color" />
+        <attr name="ms_hide_arrow" format="boolean" />
+        <attr name="ms_background_color" format="color" />
+        <attr name="ms_text_color" format="color" />
+        <attr name="ms_dropdown_max_height" format="dimension" />
+        <attr name="ms_dropdown_height" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="progressbarColor" format="color" />
+        <attr name="progressBarThickness" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean" />
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_shadow" format="boolean" />
+        <attr name="civ_shadow_color" format="color" />
+        <attr name="civ_shadow_radius" format="float" />
+    </declare-styleable>
+
+</resources>

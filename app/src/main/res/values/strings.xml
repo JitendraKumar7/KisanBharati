@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">KishanBharatiApp</string>
+    <string name="title_login">Login</string>
+    <string name="title_registration">Registration</string>
+    <string name="title_aboutus">About Us</string>
+    <string name="title_contactus">Contact Us</string>
+    <string name="title_weather">Weather</string>
+    <string name="title_main">MainAcitvity</string>
+    <string name="title_news">News</string>
+    <string name="title_Crop">Crop</string>
+    <string name="tab_news">Croptab</string>
+    <string name="title_krishi">Krishi Yantra</string>
+    <string name="title_help">Help Center</string>
+    <string name="title_Dealer">Dealer</string>
+    <string name="title_blogs">Blogs</string>
+    <string name="title_krishi_yantra_information">Krishi Yantra Information</string>
+    <string name="title_market_info">महाराष्ट्र चीनी टेंडर (ड्यूटी पेड)\nजारंदेश्वर\nएस-3740\nएम-3790\nसोनहीरा\nएस-3775\nएम-3845</string>
+
+    <string name="title_hn">फ़सल  की जानकारी</string>
+    <string name="title_hn1">कृषि समाचार</string>
+    <string name="title_hn2">बाजार भाव</string>
+    <string name="title_hn3">बीज, खाद ,कीटनाशक विक्रेता</string>
+    <string name="title_hn4">किसान सहायता केंद्र</string>
+    <string name="title_hn5">कृषि यंत्र</string>
+    <string name="title_hn6">सरकारी योजनाए</string>
+    <string name="title_hn7">बीजों की जानकारी</string>
+
+    <string name="myHomes">होम </string>
+    <string name="News">कृषि समाचार</string>
+    <string name="mr">बाजार भाव</string>
+    <string name="crops">फसलों की जानकारी</string>
+    <string name="yantra">कृषि यंत्र</string>
+    <string name="dealers">बीज, खाद , कीटनाशक विक्रेता</string>
+    <string name="seeds">बीजो की जानकारी</string>
+    <string name="blog">ब्लोग्स</string>
+    <string name="profile">सरकारी योजनाएँ</string>
+    <string name="myNotification">अधिसूचना</string>
+    <string name="contactUs">संपर्क करे</string>
+    <string name="aboutus">हमारे बारे में</string>
+    <string name="privacy">एकांत</string>
+    <string name="rate">मूल्यांकन करें</string>
+
+    <string name="logout">लोग आउट</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="API_key">AIzaSyDj4BvnehRF2Hur7Ra6EpGyePJ8gNV6VnQ</string>
+
+    <string name="change_city">Change city</string>
+
+    <!-- Put your own APP ID here -->
+    <string name="cancel">cancelled</string>
+    <string name="GPSAlertDialogTitle">Gps alert</string>
+    <string name="GPSAlertDialogMessage">dialog message</string>
+
+    <string name="contact_us">किसानों की आमदनी बढ़ने हेतु हमारा प्रयास \n\nभारत एक कृषि प्रधान देश है, देश की 65% आबादी ग्रामीण क्षेत्र में रहती है| विश्व के किसी भी देश में किसानों की आबादी भारत से अधिक नहीं है| भारत एक ऐसा देश है जहाँ हर तरह के जलवायु, तापमान व आद्रता मिलती है| विश्व के पहले 10 बड़े देशों में शामिल होने के बावजूद भारत को अनाजों की घरेलू मांग पूरा करने के लिए आयात का रास्ता अपनाना पड़ता है, जिससे देश की समृद्धि को नुकसान पहुँचता है| विशाल खपत व उपजाऊ ज़मीन होने के बावजूद आज़ादी के बाद भी किसानों की स्तिथि में खास अंतर नहीं आया| आज भी हमारा किसान भूखे पेट सोता है| दूसरों के लिए अन्न पैदा करने वाला किसान को अपना ही पेट भरने के लिए अपनी ही फसल को बाजार से अधिक दामों में खरीदना पड़ता है| \n\nआज के युग में लगभग हर किसान के पास मोबाइल उपलब्ध है| किसान भाई अब "किसान भारती" एप्लीकेशन के द्वारा अब कृषि से जुडी हर जानकारी प्राप्त कर सकेंगे| इस एप्लीकेशन में किसानों से सम्बंदित लगभग हर जानकारी मिलाने का हमारा प्रयास रहेगा| इस एप्लीकेशन के जरिये आप फसल बोने की तैयारी से ले कर, मंडी भाव तक आपको इस माध्यम से मिलेंगे| इसके आलावा आधुनिक यन्त्र, बीज, कीटनाशकों के जानकारी से जुडी सभी जानकारी के अलावा सरकारी स्कीम, फसलों से सम्भंदित खबर भी दी जाएंगी|/n/n इस मुहीम का सपना श्री राहुल चौहान का है, जिन्होंने पिछले 15 सालों से देश विदेश में कृषि सम्भंदित कार्यों को बहुत करीब से देखा है| श्री चौहान ने यूरोप के कई देश जैसे की पोलैंड, जर्मनी, अमेरिका, अफ्रीकी देश घाना, अल्जीरिया, मिश्र, इथियोपिया, साउथ अफ्रीका, बेनिन, मोरक्को, नाइजीरिया, नाइजर, सूडान, एशिया देश जैसे टर्की, सीरिया, इजराइल, श्री लंका और दक्षिण अमेरिकन देश मलेशिया, ब्राज़ील, अर्जेंटीना देशो में भ्रमण किया| कई  देशों का भ्रमण करने के बाद श्री चौहान को लगा कि भारतीय किसानों का किस तरह से सहायता की जाए जिससे किसानों को आधुनिक कृषि प्रणाली, बाजार में सही भावो के जानकारी, मौसम की जानकारी सिर्फ एक मंच पर मिले| यह एप्लीकेशन किसान भाइयों के लिए आजीवन निःशुल्क है|
+    </string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string name="ki_jankari">की जानकारी</string>
+
+    <string name="feedback">प्रतिक्रिया</string>
+
+
+
+</resources>

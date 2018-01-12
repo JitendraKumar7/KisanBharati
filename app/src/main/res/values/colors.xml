@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_color_font">#212121</color>
+    <color name="font_light_grey">#727272</color>r>
+    <color name="google_bg">#D34836</color>
+    <color name="edit_text_light__grey_color">#b2b2b2</color>
+    <color name="light_green_color">#BEECAC</color>
+    <color name="colorGreen">#90C63C</color>
+    <color name="colorGrey">#CBC9CA</color>
+    <color name="colorhomebg">#ebebeb</color>
+
+
+    <color name="confession_color">#492295</color>
+    <color name="contest_color">#25BBB9</color>
+    <color name="frame_color">#FF4258</color>
+    <color name="selfie_color">#00BBFE</color>
+    <color name="timetable_color">#FF685D</color>
+    <color name="tab_logo_color">#229ec2</color>
+
+
+
+
+    <color name="primary_light">#C8E6C9</color>
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="squarecamera__red">#F0001D</color>
+    <color name="squarecamera__pressed_red">#B3F0001D</color>
+    <color name="squarecamera__white">#FFFFFF</color>
+    <color name="squarecamera__pressed_white">#99FFFFFF</color>
+
+    <color name="image_border">#C9D6D7</color>
+    <color name="action_bg">#012D46</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="signup_hint_color">#2E3092</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="white" type="color">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="btnBackground">#e7e7e7</color>
+    <color name="background_color">#E6E9EE</color>
+    <color name="chrome_grey">#F2F2F2</color>
+    <color name="grey" type="color">#E6E9EE</color>
+    <color name="trans_black_25">#d1d1d1</color>
+    <color name="divider1">#aaaaaa</color>
+    <color name="darkgrey" type="color">#808080</color>
+    <color name="darkgray_7">#6b6b6b</color>
+    <color name="grey_800">#424242</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="black">#000000</color>
+    <color name="blue" type="color">#FF33B5E5</color>
+    <color name="darkblue" type="color">#FF0099CC</color>
+    <color name="purple" type="color">#FFAA66CC</color>
+    <color name="darkpurple" type="color">#FF9933CC</color>
+    <color name="green" type="color">#FF99CC00</color>
+    <color name="darkgreen" type="color">#FF669900</color>
+    <color name="yellow" type="color">#FFFF00</color>
+    <color name="orange" type="color">#FFFFBB33</color>
+    <color name="darkorange" type="color">#FFFF8800</color>
+    <color name="red" type="color">#FFFF4444</color>
+    <color name="darkred" type="color">#FFCC0000</color>
+
+    <color name="text_color_green">#A4Cf39</color>
+    <color name="app_blue">#045CB1</color>
+
+
+    // Cropping Gallery Image
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#50000000</color>
+    <color name="highlight">#f3f3f3</color>
+
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+
+    <color name="dateTimeColorAccent">#494949</color>
+
+    <!--Confession Color-->
+    <color name="post_your_confession_btn">#3F1E86</color>
+
+    <!--Sweet Alert-->
+    <color name="float_transparent">#00000000</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+
+    // Color Dialog
+    <color name="color_dialog_gray">#ededf3</color>
+    <color name="color_dialog_content">#ed7861</color>
+    <color name="color_dialog_title">#303030</color>
+    <color name="color_dialog_content_prompt">#343434</color>
+
+    <color name="color_type_info">#79b3e4</color>
+    <color name="color_type_help">#e8bd4b</color>
+    <color name="color_type_wrong">#ed7861</color>
+    <color name="color_type_warning">#e8bd4b</color>
+    <color name="color_type_success">#90b06e</color>
+    <color name="rippelColor">#0099CC</color>
+
+
+    <color name="background_button">#045D55</color>
+    <color name="advertising_color">#a9c3c1</color>
+    <color name="brawn_color">#e7e6d5</color>
+    <color name="light_blue_color">#66b1dd</color>
+    <color name="header_blue_color">#007dc6</color>
+    <color name="headercolor">#40AAE6</color>
+    <color name="welcome_text_color">#FCB03B</color>
+    <color name="grey_color_divider">#d3d3d3</color>
+    <!-- coloe for currency screeen -->
+
+    <color name="light_header">#47807c</color>
+    <color name="gray_color">#6D6D6D</color>
+    <color name="header_color_toolbar">#045D55</color>
+    <color name="red_color">#ED1B23</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

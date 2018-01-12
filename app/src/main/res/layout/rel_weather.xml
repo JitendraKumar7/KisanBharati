@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_weather"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/weather">
+
+        <!--<pl.droidsonroids.gif.GifImageView-->
+        <!--android:id="@+id/gif_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/weather"-->
+        <!--/>-->
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_30"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWeatherLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/tvMin"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha=".90">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        >
+
+        <ImageView
+            android:id="@+id/ImgPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_10"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_header" />
+    <TextView
+        android:id="@+id/categoryHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_6"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_toRightOf="@+id/ImgPhoto"
+        android:text="Category Heading"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_18"
+        android:textStyle="bold" />
+
+
+    <WebView
+        android:id="@+id/categoryDescriptionWebView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImgPhoto"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_6"
+        android:layout_marginRight="@dimen/margin_6"
+        android:layout_marginTop="@dimen/margin_15"
+        android:minHeight="200dp"
+        android:text="Category Description"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_6"
+        android:layout_marginRight="@dimen/margin_6"
+        android:layout_marginTop="2dp"
+        android:background="@color/black" />
+
+</RelativeLayout>
+
+</RelativeLayout>
+
+
+
+

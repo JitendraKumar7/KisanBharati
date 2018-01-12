@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_toolbar" />
+
+    <ImageView
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_110dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginTop="@dimen/_10dp"
+        android:src="@drawable/logo_header" />
+
+    <EditText
+        android:id="@+id/edt_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_200dp"
+        android:layout_marginLeft="@dimen/_15dp"
+        android:layout_marginRight="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@drawable/login_user_bg"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLines="8"
+        android:padding="5dp"></EditText>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15dp"
+        android:layout_marginRight="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:background="@drawable/login_state_pressed"
+        android:text="@string/feedback"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_14" />
+
+</LinearLayout>

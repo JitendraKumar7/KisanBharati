@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.angiratech.kisaanapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission
+        android:name="angiratech.com.kisaanapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <application
+        android:name="angiratech.com.kisaanapp.Activity.KishanAplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_header"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_header"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Home"
+            android:label="@string/title_main"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Login"
+            android:label="@string/title_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Registration"
+            android:label="@string/title_registration"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Aboutus"
+            android:label="@string/title_aboutus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.ContactUs"
+            android:label="@string/title_contactus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.News"
+            android:label="@string/title_news"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Scrolling"
+            android:label="@string/title_weather"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.cropTabHolder"
+            android:label="@string/tab_news"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Crop"
+            android:label="@string/tab_news"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.KrishiYantraInformation"
+            android:label="@string/title_krishi_yantra_information"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.KrishiYantra"
+            android:label="@string/title_krishi_yantra_information"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Seeds"
+            android:label="@string/title_krishi_yantra_information"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.HelpCenter"
+            android:label="@string/title_help"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Dealers"
+            android:label="@string/title_Dealer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.SeedListInformation"
+            android:label="@string/title_Dealer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.SchemeInformation"
+            android:label="@string/title_Dealer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Market"
+            android:label="@string/title_Dealer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Scheme"
+            android:label="@string/title_Dealer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Blogs"
+            android:label="@string/title_blogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Youtube.YoutubeMain"
+            android:label="@string/title_blogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Feedback"
+            android:label="@string/title_blogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+    </application>
+
+</manifest>

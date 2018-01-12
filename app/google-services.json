@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "426657872880",
+    "firebase_url": "https://kishanbharatiapp-f2b8e.firebaseio.com",
+    "project_id": "kishanbharatiapp-f2b8e",
+    "storage_bucket": "kishanbharatiapp-f2b8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426657872880:android:9927e6cd7f2b0d33",
+        "android_client_info": {
+          "package_name": "com.angiratech.kisaanapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426657872880-b99rs50uh7tahhiaoqrjmoni455cla9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angiratech.kisaanapp",
+            "certificate_hash": "c275a089d45bafd7caa4647a90d156176aabe713"
+          }
+        },
+        {
+          "client_id": "426657872880-rns1li3q00vv7ugpsnok028ukbtotvf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF2fTtDyFy_odfX37Qh6ZMJ7TxmVxirnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426657872880-rns1li3q00vv7ugpsnok028ukbtotvf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

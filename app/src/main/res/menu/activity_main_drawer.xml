@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_HomePage"
+            android:checked="false"
+            android:icon="@drawable/home_icon"
+            android:title="@string/myHomes" />
+
+
+        <item
+            android:id="@+id/nav_news"
+            android:checked="false"
+            android:icon="@drawable/news_icon"
+            android:title="@string/News" />
+
+
+        <item
+            android:id="@+id/nav_mr"
+            android:checked="false"
+            android:icon="@drawable/market_rate_icon"
+            android:title="@string/mr" />
+
+        <item
+            android:id="@+id/nav_crops"
+            android:checked="false"
+            android:icon="@drawable/crop_icon"
+            android:title="@string/crops" />
+
+        <item
+            android:id="@+id/nav_yantra"
+            android:checked="false"
+            android:icon="@drawable/equipment_icon"
+            android:title="@string/yantra" />
+        <item
+            android:id="@+id/nav_dealers"
+            android:checked="false"
+            android:icon="@drawable/dealer_icon"
+            android:title="@string/dealers" />
+        <item
+            android:id="@+id/nav_seeds"
+            android:checked="false"
+            android:icon="@drawable/seeds_icon"
+            android:title="@string/seeds" />
+        <item
+            android:id="@+id/nav_scheme"
+            android:checked="false"
+            android:icon="@drawable/scheme_icon"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_blogs"
+            android:checked="false"
+            android:icon="@drawable/blogs_icon"
+            android:title="@string/blog" />
+
+        <item
+            android:id="@+id/nav_notification"
+            android:checked="false"
+            android:icon="@drawable/notification_icon"
+            android:title="@string/myNotification" />
+        <item
+            android:id="@+id/nav_AboutUs"
+            android:checked="false"
+            android:icon="@drawable/faqs_icon"
+            android:title="@string/aboutus" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:checked="false"
+            android:icon="@drawable/contactus_icon"
+            android:title="@string/contactUs" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:checked="false"
+            android:icon="@drawable/feedback_48"
+            android:title="@string/feedback" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:checked="false"
+            android:icon="@drawable/logout_icon"
+            android:title="@string/logout" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:checkable="false"
+            android:icon="@drawable/ic_menu_share"
+            android:title="शेयर" />
+        <item
+            android:id="@+id/nav_rateApp"
+            android:checked="false"
+            android:icon="@drawable/rate_icon"
+            android:title="@string/rate" />
+    </group>
+
+
+</menu>

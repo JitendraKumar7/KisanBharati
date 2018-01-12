@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="angiratech.com.kisaanapp.Activity.Home"
+
+    tools:showIn="@layout/activity_main">
+
+    <include layout="@layout/rel_weather" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:background="#ebebeb"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="6dp"
+            android:background="#ebebeb"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+                                android:elevation="@dimen/margin_5"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn1"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/news_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_bazar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/market_rate_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_fasal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/crop_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_scheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn6"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/scheme_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_vikreta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+                                android:elevation="@dimen/margin_5"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn3"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/dealer_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_yantra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+                                android:elevation="@dimen/margin_5"
+                                android:gravity="center">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn5"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/equipment_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_seed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+                                android:elevation="@dimen/margin_5"
+                                android:gravity="center">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn7"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/seeds_icon" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/title_hn4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/help_center_icon" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="130dp"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_weight="1"
+                        android:background="@color/trans_black_25"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent"
+                        card_view:cardCornerRadius="@dimen/card_elevation_2"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/cat_container_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/tab_logo_color"
+                                android:elevation="@dimen/margin_5"
+                                android:gravity="center">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/feedback"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_16" />
+
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/feedback84" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+
+
+            android:src="@drawable/youtube" />
+    </LinearLayout>
+
+
+</LinearLayout>

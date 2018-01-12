@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_dealers"
+    tools:context="angiratech.com.kisaanapp.Activity.ActivityDealers"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <angiratech.com.kisaanapp.CustomSpinnner.MaterialSpinner
+        android:id="@+id/spnr_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_user_bg"
+        android:hint="District"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/black"
+        android:textSize="16sp"
+        app:ms_dropdown_height="wrap_content"
+        app:ms_dropdown_max_height="350dp" />
+
+    <TextView
+        android:id="@+id/spnr_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@+id/spnr_district"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:hint="State"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/black"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_add_dealer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:layout_below="@+id/spnr_state"
+        android:scrollbars="vertical"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_dealer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="6dp"
+        android:layout_below="@+id/spnr_state"
+        android:scrollbars="vertical"/>
+</RelativeLayout>
