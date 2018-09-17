@@ -20,6 +20,7 @@
         android:allowBackup="true"
         android:icon="@drawable/logo_header"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@drawable/logo_header"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
@@ -141,6 +142,26 @@
             android:label="@string/title_blogs"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="angiratech.com.kisaanapp.Activity.Notifications"
+            android:label="@string/title_blogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+
+        <!-- Firebase Notifications -->
+        <service android:name="angiratech.com.kisaanapp.FirebBase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="angiratech.com.kisaanapp.FirebBase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
 
     </application>
 

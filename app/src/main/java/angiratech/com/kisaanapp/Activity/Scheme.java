@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,7 +35,7 @@ import angiratech.com.kisaanapp.Utility.CheckInternet;
  * Created by NZT-59 on 5/11/2017.
  */
 
-public class Scheme extends AppCompatActivity {
+public class Scheme extends AppCompatActivity implements View.OnClickListener {
     private MyDialog myDialog;
     private LinearLayoutManager mLayoutManager;
 
@@ -51,6 +52,7 @@ public class Scheme extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_scheme);
         toolbar();
         init();
@@ -123,18 +125,14 @@ public class Scheme extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
                     }
                 }
-
                 @Override
                 public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                     super.onFailure(statusCode, headers, responseString, throwable);
                 }
             });
-
         }
-
     }
 
     private void toolbar() {
@@ -157,8 +155,15 @@ public class Scheme extends AppCompatActivity {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
+        }
+    }
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.toolbarImg) {
+            Intent notific = new Intent(Scheme.this, Notifications.class);
+            startActivity(notific);
         }
     }
 }

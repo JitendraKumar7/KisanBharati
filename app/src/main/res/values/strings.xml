@@ -16,7 +16,7 @@
     <string name="title_krishi_yantra_information">Krishi Yantra Information</string>
     <string name="title_market_info">महाराष्ट्र चीनी टेंडर (ड्यूटी पेड)\nजारंदेश्वर\nएस-3740\nएम-3790\nसोनहीरा\nएस-3775\nएम-3845</string>
 
-    <string name="title_hn">फ़सल  की जानकारी</string>
+    <string name="title_hn">कटाई एवं भण्डारण</string>
     <string name="title_hn1">कृषि समाचार</string>
     <string name="title_hn2">बाजार भाव</string>
     <string name="title_hn3">बीज, खाद ,कीटनाशक विक्रेता</string>
@@ -41,7 +41,7 @@
     <string name="rate">मूल्यांकन करें</string>
 
     <string name="logout">लोग आउट</string>
-
+    <string name="logouthan">हान</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -68,6 +68,15 @@
 
     <string name="feedback">प्रतिक्रिया</string>
 
+    <string name="nonactive_user">आप सक्रिय उपयोगकर्ता नहीं हैं</string>
+    <string name="contactusat">आप लॉगआउट कर रहे हैंं</string>
+    <string name="phone">हमसे संपर्क करें 9350141815</string>
+    <string name="email">Email- kisanbharati@gmail.com</string>
+    <string name="permission_msg">Please grant all permissions to use this app.</string>
 
+    <string name="permission_title">Permissions Required.</string>
+    <string name="ok">OK</string>
+    <string name="morning">सुबह</string>
+    <string name="evening">शाम</string>
 
 </resources>

@@ -63,13 +63,24 @@ public class Webservice {
         client.get(finalUrl, requestParams, jsonHttpResponseHandler);
     }
 
-    public static void userLoginRequest(String mobile, JsonHttpResponseHandler httpResponseHandler) {
+   /* public static void userLoginRequest(String mobile, JsonHttpResponseHandler httpResponseHandler) {
         RequestParams params = new RequestParams();
         params.put(AppConstants.KEY_ACTION, AppConstants.KEY_ACTIONLOGIN);
         params.put(AppConstants.KEY_MOBILE, mobile);
         // params.put("device_id", "2726f75cfd253778");
         Webservice.getLogin(AppConstants.BASE_URL_KISAN, params, httpResponseHandler);
     }
+*/
+   public static void userLoginRequest(String mobile, JsonHttpResponseHandler httpResponseHandler) {
+       RequestParams params = new RequestParams();
+       params.put("action", "login");
+       params.put("mobile", mobile);
+       // params.put("device_id", "2726f75cfd253778");
+       Webservice.getLogin(AppConstants.BASE_URL_KISAN, params, httpResponseHandler);
+   }
+
+
+
 
 
     public static void GetcropList(JsonHttpResponseHandler httpResponseHandler) {
@@ -100,8 +111,6 @@ public class Webservice {
         RequestParams params = new RequestParams();
         params.put(AppConstants.KEY_ACTION, AppConstants.KEY_ACTIONNEWS);
         Webservice.getCrop(AppConstants.BASE_URL_CROP, params, httpResponseHandler);
-
-
     }
 
     public static void GetDealerList(String UserName, String mobile, String Firm, String Address, String Scope, String DistrictId, JsonHttpResponseHandler httpResponseHandler) {
@@ -112,9 +121,22 @@ public class Webservice {
         params.put("firm_name", Firm);
         params.put("address", Address);
         params.put("district", DistrictId);
-
         Webservice.getCrop(AppConstants.BASE_URL_CROP, params, httpResponseHandler);
     }
+
+
+
+
+
+    public static void GetValidUser(String mobile, JsonHttpResponseHandler httpResponseHandler) {
+        RequestParams params = new RequestParams();
+        params.put(AppConstants.KEY_ACTION, AppConstants.KEY_VALIDATE_USER);
+        params.put("mobile", mobile);
+        Webservice.getCrop(AppConstants.BASE_URL_CROP, params, httpResponseHandler);
+    }
+
+
+
 
     public static void GetStateList(JsonHttpResponseHandler httpResponseHandler) {
         RequestParams params = new RequestParams();

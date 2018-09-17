@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,6 +51,8 @@ public class Crop extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+
         setContentView(R.layout.activity_crop);
         init();
         toolbar();
@@ -97,7 +100,7 @@ public class Crop extends AppCompatActivity implements View.OnClickListener {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
@@ -161,10 +164,17 @@ public class Crop extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getApplicationContext(),
-                "You have clicked " + ((TextView) v).getText(),
-                Toast.LENGTH_LONG).show();
 
+        switch (v.getId()){
+
+            case R.id.toolbarImg:
+                Intent notific = new Intent(Crop.this, Notifications.class);
+                startActivity(notific);
+
+                break;
+
+
+        }
 
     }
 }

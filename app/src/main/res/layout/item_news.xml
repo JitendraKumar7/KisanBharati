@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/ImgPhoto"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_margin="@dimen/margin_10"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -42,7 +42,7 @@
             android:layout_marginLeft="@dimen/margin_10"
             android:layout_marginTop="@dimen/margin_5"
             android:layout_toRightOf="@+id/ImgPhoto"
-            android:gravity="center"
+            android:gravity="right"
             android:singleLine="true"
             android:text="Time"
             android:textColor="@color/black"
@@ -116,6 +116,7 @@
             android:layout_marginBottom="@dimen/margin_10"
             android:layout_marginTop="@dimen/margin_17"
             android:background="@color/white"
+            android:clickable="false"
             android:minHeight="200dp"
             android:text="Category Description"
             android:textSize="@dimen/textsize_14" />
@@ -148,7 +149,7 @@
             <ImageView
                 android:id="@+id/image_banner"
                 android:layout_width="wrap_content"
-                android:layout_height="160dp"
+                android:layout_height="100dp"
                 android:layout_marginBottom="@dimen/_7dp"
                 android:layout_marginLeft="@dimen/_10dp"
                 android:src="@drawable/app_logo" />

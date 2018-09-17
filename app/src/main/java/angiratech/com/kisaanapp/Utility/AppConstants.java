@@ -82,6 +82,7 @@ public class AppConstants {
     public static final String KEY_ACTIONNEWSREAD = "news_read_update";
     public static final String KEY_ACTIONSUBSCRIPTION = "get_user_plan";
     public static final String KEY_DEALER_REGISTER = "register_dealer";
+    public static final String KEY_VALIDATE_USER= "current_status";
 
     public static final String KEY_SENDOTP = "send_otp";
     public static final String KEY_VERIFYOTP = "verify_otp";
@@ -96,7 +97,7 @@ public class AppConstants {
     public static final String TABLE_NEWS = "table_news";
 
     public static String PHONENUMBER = "9910963354";
-    public static int TIMEOUT = 30 * 1000;
+    public static int TIMEOUT = 30 * 1;
 
 //     SMS provider identification
 //     It should match with your SMS gateway origin

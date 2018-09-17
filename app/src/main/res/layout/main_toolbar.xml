@@ -4,9 +4,8 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@drawable/header"
+    android:background="#405A1D"
     app:theme="@style/ToolbarColoredBackArrow">
-
 
 
     <LinearLayout
@@ -16,19 +15,38 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
+        <TextView
             android:id="@+id/toolbarImg"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center_vertical|center"
-            android:src="@drawable/tool_logo_header"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kissan Bharati"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold"
             android:visibility="visible" />
 
+
+        <ImageView
+            android:id="@+id/img_youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/youtube" />
+
+
+        <ImageView
+            android:id="@+id/img_Notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:background="@drawable/notification" />
+
+
     </LinearLayout>
-
-
-
 
 
 </android.support.v7.widget.Toolbar>

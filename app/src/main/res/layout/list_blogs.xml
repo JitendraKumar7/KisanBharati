@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Recent Posts"
+            android:text="हाल की पोस्ट"
             android:textColor="@color/black"
             android:textSize="@dimen/textsize_23"
             android:textStyle="bold" />
@@ -85,7 +85,7 @@
 
                     </LinearLayout>
 
-                    <TextView
+                    <WebView
                         android:id="@+id/tv_descrition"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

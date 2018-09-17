@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#425420</color>
+    <color name="colorPrimaryDark">#425420</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_color_font">#212121</color>
@@ -125,7 +125,7 @@
     <color name="brawn_color">#e7e6d5</color>
     <color name="light_blue_color">#66b1dd</color>
     <color name="header_blue_color">#007dc6</color>
-    <color name="headercolor">#40AAE6</color>
+    <color name="headercolor">#425420</color>
     <color name="welcome_text_color">#FCB03B</color>
     <color name="grey_color_divider">#d3d3d3</color>
     <!-- coloe for currency screeen -->
@@ -135,5 +135,8 @@
     <color name="header_color_toolbar">#045D55</color>
     <color name="red_color">#ED1B23</color>
     <color name="transparent">#00000000</color>
+    <color name="linecolor">#788A62</color>
+
+
 
 </resources>

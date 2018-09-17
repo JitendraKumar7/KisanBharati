@@ -4,7 +4,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/tab_logo_color"
+    android:background="@color/colorPrimary"
     app:theme="@style/ToolbarColoredBackArrow">
 
 
@@ -30,12 +30,10 @@
             android:id="@+id/toolbarame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
             android:layout_toRightOf="@+id/img_back"
             android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_50dp"
             android:text=""
             android:textColor="@android:color/white"
             android:textSize="18sp"
@@ -49,10 +47,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="30dp"
-
             android:src="@drawable/notification_icon"
             android:visibility="gone"
-
             />
 
     </RelativeLayout>

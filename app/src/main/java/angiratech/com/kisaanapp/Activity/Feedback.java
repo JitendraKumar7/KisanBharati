@@ -8,6 +8,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,7 +30,6 @@ import angiratech.com.kisaanapp.Utility.MyToast;
  */
 
 
-
 public class Feedback extends AppCompatActivity implements View.OnClickListener {
     private AppCompatButton btn_feedback;
     private EditText edt_feedback;
@@ -45,6 +45,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.suggestion);
         mySession = new MySession(Feedback.this);
         myDialog = new MyDialog(Feedback.this);
@@ -68,6 +69,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
@@ -76,7 +78,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
         btn_feedback = (AppCompatButton) findViewById(R.id.btn_feedback);
         btn_feedback.setOnClickListener(this);
         edt_feedback = (EditText) findViewById(R.id.edt_feedback);
-        user_id=mySession.getUserId();
+        user_id = mySession.getUserId();
     }
 
     @Override
@@ -87,10 +89,18 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
                     validation();
                 }
                 break;
+
+            case R.id.toolbarImg:
+                Intent notific = new Intent(Feedback.this, Notifications.class);
+                startActivity(notific);
+                break;
+
+
             default:
                 break;
         }
     }
+
     private boolean validation() {
         if (edt_feedback.getText().toString().trim().equals("")) {
             edt_feedback.setError("Please Enter Feedback");
@@ -98,7 +108,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
             return false;
         } else {
             myDialog.ShowProgressDialogue();
-            new Webservice().FeedbackRequest(user_id,edt_feedback.getText().toString(), new JsonHttpResponseHandler() {
+            new Webservice().FeedbackRequest(user_id, edt_feedback.getText().toString(), new JsonHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     super.onSuccess(statusCode, headers, response);
@@ -106,7 +116,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
                     if (response != null) {
                         try {
                             if (response.optString("statuscode").equalsIgnoreCase("1")) {
-                                String mesg=response.optString("statusmessage");
+                                String mesg = response.optString("statusmessage");
                                 Log.e("RESPONSE", mesg);
                                 edt_feedback.setText("");
                                 MyToast.Lmsg(Feedback.this, mesg);
@@ -124,6 +134,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
                         }
                     }
                 }
+
                 @Override
                 public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                     // TODO Auto-generated method stub

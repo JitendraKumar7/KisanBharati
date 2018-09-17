@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +40,8 @@ public class KrishiYantraInformation extends AppCompatActivity {
                 .cacheInMemory(true)
                 .cacheOnDisk(true)
                 .build();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+
         setContentView(R.layout.activity_krishi_yantra_info);
         yantraListModel = getIntent().getParcelableExtra("YantraData");
         toolbar();

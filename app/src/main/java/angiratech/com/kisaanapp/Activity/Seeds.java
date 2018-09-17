@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,7 +35,7 @@ import angiratech.com.kisaanapp.Utility.CheckInternet;
  * Created by NZT-59 on 5/11/2017.
  */
 
-public class Seeds extends AppCompatActivity {
+public class Seeds extends AppCompatActivity implements View.OnClickListener{
     private TextView toolbarName;
     private Toolbar toolbar;
     private ImageView img_back;
@@ -48,6 +49,7 @@ public class Seeds extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_seeds);
         intoolbar();
         intit();
@@ -147,9 +149,15 @@ public class Seeds extends AppCompatActivity {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
-
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.toolbarImg) {
+            Intent notific = new Intent(Seeds.this, Notifications.class);
+            startActivity(notific);
+        }
+    }
 }

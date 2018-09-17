@@ -1,5 +1,6 @@
 package angiratech.com.kisaanapp.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -11,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -75,9 +77,11 @@ public class News extends AppCompatActivity implements View.OnClickListener {
     int bannercount = 0;
     int finalvalue;
     ArrayList<CombindMyList> combindlist = new ArrayList<>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_home_news);
         initView();
         setupToolbar();
@@ -85,6 +89,7 @@ public class News extends AppCompatActivity implements View.OnClickListener {
             GetNewsRequest();
         }
     }
+
     private void initView() {
         myDialog = new MyDialog(News.this);
         session = new MySession(News.this);
@@ -117,6 +122,7 @@ public class News extends AppCompatActivity implements View.OnClickListener {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
@@ -131,15 +137,17 @@ public class News extends AppCompatActivity implements View.OnClickListener {
                     super.onSuccess(statusCode, headers, response);
                     myDialog.CancelProgressDialog();
                     if (response != null) {
-                        Log.e("News List Response", response.toString());
+
+
                         try {
+                            Log.e("News List Response", response.toString());
                             if (response.optString("statuscode").equalsIgnoreCase("1") && response.optString("statusmessage").equalsIgnoreCase("OK")) {
                                 JSONArray newsListJsonArray = response.optJSONArray("news");
                                 if (newsListJsonArray.length() > 0) {
                                     int totalsize = 0;
                                     int valincrement = 0;
                                     // First news data
-                                   for (int i = 0; i < newsListJsonArray.length(); i++) {
+                                    for (int i = 0; i < newsListJsonArray.length(); i++) {
                                         JSONObject newsDataObject = newsListJsonArray.optJSONObject(i);
                                         NewsDetailsModel newsModel = new NewsDetailsModel();
                                         lastNewsId = newsDataObject.optString("news_id");
@@ -152,7 +160,7 @@ public class News extends AppCompatActivity implements View.OnClickListener {
                                         newsDetailsList.add(newsModel);
                                         Log.e("NEWSRESPONSE", newsDataObject.toString());
                                     }
-                                   // Banner Data Listing
+                                    // Banner Data Listing
                                     JSONArray bannerListJsonArray = response.optJSONArray("banner");
                                     for (int j = 0; j < bannerListJsonArray.length(); j++) {
                                         JSONObject bannerDataObject = bannerListJsonArray.optJSONObject(j);
@@ -170,14 +178,13 @@ public class News extends AppCompatActivity implements View.OnClickListener {
                                         try {
                                             if ((d % 5 == 0) && (d != 0)) {
                                                 if (bannercount >= bannerlength) {
-                                                  //  comblist.setBanner(bannerDetailsList.get(d));
+                                                    //  comblist.setBanner(bannerDetailsList.get(d));
                                                     comblist.setNews(newsDetailsList.get(d - bannercount));
-                                                }
-                                                else {
-                                                    if(bannerDetailsList.get(bannercount)!=null) {
+                                                } else {
+                                                    if (bannerDetailsList.get(bannercount) != null) {
                                                         comblist.setBanner(bannerDetailsList.get(bannercount));
                                                         bannercount++;
-                                                    }else{
+                                                    } else {
                                                         comblist.setNews(newsDetailsList.get(d - bannercount));
                                                     }
                                                 }
@@ -189,7 +196,7 @@ public class News extends AppCompatActivity implements View.OnClickListener {
                                             e.printStackTrace();
                                         }
                                     }
-                                    mAdapter = new NewsListAdaptor(combindlist, News.this, myNewsRecyclerView,bannercount);
+                                    mAdapter = new NewsListAdaptor(combindlist, News.this, myNewsRecyclerView, bannercount);
                                     myNewsRecyclerView.setAdapter(mAdapter);
                                 }
 
@@ -201,7 +208,10 @@ public class News extends AppCompatActivity implements View.OnClickListener {
                             e.printStackTrace();
 
                         }
+
+
                     }
+
                 }
 
                 @Override
@@ -221,6 +231,12 @@ public class News extends AppCompatActivity implements View.OnClickListener {
             if (CheckInternet.isNetwork(this)) {
                 GetNewsRequest();
             }
+
+        } else if (view.getId() == R.id.toolbarImg) {
+
+
+            Intent notific = new Intent(News.this, Notifications.class);
+            startActivity(notific);
 
         }
     }

@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,7 +35,7 @@ import angiratech.com.kisaanapp.Utility.CheckInternet;
  * Created by SONY on 06-05-2017.
  */
 
-public class KrishiYantra extends AppCompatActivity {
+public class KrishiYantra extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView recyclerView;
     private LinearLayoutManager mLayoutManager;
     KrishiYantraListAdapter recyclerViewAdapter;
@@ -49,6 +50,7 @@ public class KrishiYantra extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.krishi_yantra);
         init();
         toolbar();
@@ -76,7 +78,7 @@ public class KrishiYantra extends AppCompatActivity {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
@@ -97,7 +99,7 @@ public class KrishiYantra extends AppCompatActivity {
                         Intent YantraIntent = new Intent(getApplicationContext(), KrishiYantraInformation.class);
                         YantraIntent.putExtra("YantraData", model);
                         startActivity(YantraIntent);
-                        finish();
+
                     }
 
 
@@ -155,4 +157,11 @@ public class KrishiYantra extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.toolbarImg) {
+            Intent notific = new Intent(KrishiYantra.this, Notifications.class);
+            startActivity(notific);
+        }
+    }
 }

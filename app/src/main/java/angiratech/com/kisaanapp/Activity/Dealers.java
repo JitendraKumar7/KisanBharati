@@ -2,6 +2,7 @@ package angiratech.com.kisaanapp.Activity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -76,6 +77,8 @@ public class Dealers extends AppCompatActivity implements MaterialSpinner.OnItem
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+
         setContentView(R.layout.activity_dealers);
         intit();
         toolbar();
@@ -99,7 +102,7 @@ public class Dealers extends AppCompatActivity implements MaterialSpinner.OnItem
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
 
@@ -389,6 +392,10 @@ public class Dealers extends AppCompatActivity implements MaterialSpinner.OnItem
         if (v.getId() == R.id.round_Fab) {
             showCustomDialog(Dealers.this);
 
+        }else if(v.getId()==R.id.toolbarImg){
+
+            Intent notific = new Intent(Dealers.this, Notifications.class);
+            startActivity(notific);
         }
 
     }

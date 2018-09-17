@@ -1,5 +1,6 @@
 package angiratech.com.kisaanapp.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +32,7 @@ import angiratech.com.kisaanapp.Utility.CheckInternet;
  * Created by SONY on 06-05-2017.
  */
 
-public class HelpCenter extends AppCompatActivity {
+public class HelpCenter extends AppCompatActivity  implements View.OnClickListener{
 
     private TextView toolbarName;
     protected Toolbar toolbar;
@@ -46,6 +48,7 @@ public class HelpCenter extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_help_center);
         toolbar();
         myDialog = new MyDialog(HelpCenter.this);
@@ -126,9 +129,17 @@ public class HelpCenter extends AppCompatActivity {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
             setSupportActionBar(toolbar);
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.toolbarImg) {
+            Intent notific = new Intent(HelpCenter.this, Notifications.class);
+            startActivity(notific);
+
+        }
+    }
 }

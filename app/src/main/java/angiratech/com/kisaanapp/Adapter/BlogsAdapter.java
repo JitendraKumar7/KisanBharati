@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.angiratech.kisaanapp.R;
@@ -47,7 +48,9 @@ public class BlogsAdapter extends RecyclerView.Adapter<BlogsAdapter.MyViewHolder
         BlogListModel blogmodel = list_blogs.get(position);
         if (blogmodel != null) {
             holder.tv_title.setText(blogmodel.getTitle());
-            holder.tv_description.setText(blogmodel.getDescription());
+
+            holder.tv_description.loadData(blogmodel.getDescription(), "text/html; charset=utf-8", "utf-8");
+
             if (blogmodel.getUser() != null) {
                 holder.tv_name.setText(blogmodel.getUser());
                 holder.tv_name.setVisibility(View.VISIBLE);
@@ -88,13 +91,14 @@ public class BlogsAdapter extends RecyclerView.Adapter<BlogsAdapter.MyViewHolder
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView tv_name, tv_title, tv_description, btn_comment, tv_created, total_comment;
+        public TextView tv_name, tv_title, btn_comment, tv_created, total_comment;
+        WebView tv_description;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             tv_name = (TextView) itemView.findViewById(R.id.tv_name);
             tv_title = (TextView) itemView.findViewById(R.id.tv_title);
-            tv_description = (TextView) itemView.findViewById(R.id.tv_descrition);
+            tv_description = (WebView) itemView.findViewById(R.id.tv_descrition);
 
             btn_comment = (TextView) itemView.findViewById(R.id.btn_comment);
             tv_created = (TextView) itemView.findViewById(R.id.tv_created);

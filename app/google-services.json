@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "426657872880",
-    "firebase_url": "https://kishanbharatiapp-f2b8e.firebaseio.com",
-    "project_id": "kishanbharatiapp-f2b8e",
-    "storage_bucket": "kishanbharatiapp-f2b8e.appspot.com"
+    "project_number": "173444554415",
+    "firebase_url": "https://kisanbharati-93786.firebaseio.com",
+    "project_id": "kisanbharati-93786",
+    "storage_bucket": "kisanbharati-93786.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:426657872880:android:9927e6cd7f2b0d33",
+        "mobilesdk_app_id": "1:173444554415:android:54ed9e6894cc4bc6",
         "android_client_info": {
-          "package_name": "com.angiratech.kisaanapp"
+          "package_name": "angiratech.com.kisaanapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "426657872880-b99rs50uh7tahhiaoqrjmoni455cla9s.apps.googleusercontent.com",
+          "client_id": "173444554415-9bdon6k9duu3g4mtctcrtrie858o8gqm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.angiratech.kisaanapp",
-            "certificate_hash": "c275a089d45bafd7caa4647a90d156176aabe713"
+            "package_name": "angiratech.com.kisaanapp",
+            "certificate_hash": "56f221ae47d3f4cd829adffc2b474e90dfad6d3d"
           }
         },
         {
-          "client_id": "426657872880-rns1li3q00vv7ugpsnok028ukbtotvf6.apps.googleusercontent.com",
+          "client_id": "173444554415-sva88acrtt0hgjqam6l8sc153v0if4ui.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDF2fTtDyFy_odfX37Qh6ZMJ7TxmVxirnw"
+          "current_key": "AIzaSyBDljrWS093zTUCypSkwxuQ6JMV2p9pdIE"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "426657872880-rns1li3q00vv7ugpsnok028ukbtotvf6.apps.googleusercontent.com",
+              "client_id": "173444554415-sva88acrtt0hgjqam6l8sc153v0if4ui.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

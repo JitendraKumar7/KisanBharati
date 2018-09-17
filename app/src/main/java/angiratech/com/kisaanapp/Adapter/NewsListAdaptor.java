@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.StringTokenizer;
 import java.util.TimeZone;
 import angiratech.com.kisaanapp.Model.BannerModel;
 import angiratech.com.kisaanapp.Model.CombindMyList;
@@ -116,6 +117,17 @@ public class NewsListAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolde
         eventListHolder.newsDetailWebView.setBackgroundColor(Color.TRANSPARENT);
         eventListHolder.newsDetailWebView.loadDataWithBaseURL("", combindMyList.getNews().getDescription(), "text/html", "UTF-8", "");
 
+
+        eventListHolder.newsDetailWebView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return true;
+            }
+        });
+
+        eventListHolder.newsDetailWebView.setLongClickable(false);
+
+
         if (combindMyList.getNews().getImage().equalsIgnoreCase("")) {
             eventListHolder.ImgPhoto.setImageResource(R.drawable.logo_header);
         } else {
@@ -126,19 +138,44 @@ public class NewsListAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     private String ChangeFormateDate(String createdAt) {
+        StringTokenizer tk = new StringTokenizer(createdAt);
+        String date = tk.nextToken();  // <---  yyyy-mm-dd
+        String time = tk.nextToken();
+
         String inputPattern = "yyyy-MM-dd HH:mm:ss";
-        String outputPattern = "dd-MMMM- yyyy h:mm a";
+        String dateoutput = "dd-MMMM-yyyy";
+
         SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
-        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern, new Locale("hi", "IN"));
-        outputFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        Date date = null;
+        SimpleDateFormat outputFormat = new SimpleDateFormat(dateoutput, new Locale("hi", "IN"));
+
+        Date dates = null;
         String str = null;
         try {
-            date = inputFormat.parse(createdAt);
-            str = outputFormat.format(date);
+            dates = inputFormat.parse(createdAt);
+            str = outputFormat.format(dates);
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+
+    String timeoutput;
+        try {
+            final SimpleDateFormat sdf = new SimpleDateFormat("H:mm");
+            final Date dateObj = sdf.parse(time);
+            System.out.println("time==s"+dateObj);
+            if(dateObj.getHours()>12){
+              //    evening
+                timeoutput=new SimpleDateFormat("K:mm").format(dateObj);
+                timeoutput=timeoutput+" सायंकाल";
+            }else{
+                timeoutput=new SimpleDateFormat("K:mm").format(dateObj);
+                timeoutput=timeoutput+" प्रातःकाल";
+            }
+            str=str+" "+timeoutput;
+        } catch (final ParseException e) {
+            e.printStackTrace();
+        }
+
         return str;
     }
 

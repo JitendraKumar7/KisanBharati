@@ -5,12 +5,28 @@
     android:orientation="vertical">
 
     <include layout="@layout/activity_toolbar" />
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_list_blogs"
+
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:padding="6dp"
-        android:scrollbars="vertical"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_header" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_blogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:scrollbars="vertical" />
+
+    </FrameLayout>
 
 </LinearLayout>

@@ -1,0 +1,12 @@
+
+password
+123456
+
+keystore 
+Alies angira
+
+
+
+
+Alias pass 123456
+

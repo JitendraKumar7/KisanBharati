@@ -1,6 +1,7 @@
 package angiratech.com.kisaanapp.Activity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -41,7 +42,7 @@ import angiratech.com.kisaanapp.Utility.MyToast;
  * Created by NZT-59 on 6/2/2017.
  */
 
-public class Blogs extends AppCompatActivity {
+public class Blogs extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView recyclerView;
 
     private LinearLayoutManager mLayoutManager;
@@ -62,6 +63,8 @@ public class Blogs extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+
         setContentView(R.layout.activity_blogs);
         mySession = new MySession(Blogs.this);
         init();
@@ -89,7 +92,7 @@ public class Blogs extends AppCompatActivity {
             });
             toolbarImg = (ImageView) toolbar.findViewById(R.id.toolbarImg);
             toolbarImg.setVisibility(View.VISIBLE);
-
+            toolbarImg.setOnClickListener(this);
 
             setSupportActionBar(toolbar);
         }
@@ -290,4 +293,13 @@ public class Blogs extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.toolbarImg:
+                Intent notific = new Intent(Blogs.this, Notifications.class);
+                startActivity(notific);
+                break;
+        }
+    }
 }

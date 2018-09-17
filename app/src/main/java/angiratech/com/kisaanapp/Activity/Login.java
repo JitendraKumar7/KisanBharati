@@ -1,23 +1,36 @@
 package angiratech.com.kisaanapp.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.angiratech.kisaanapp.Manifest;
 import com.angiratech.kisaanapp.R;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.apache.http.Header;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import angiratech.com.kisaanapp.Dialogs.MyDialog;
 import angiratech.com.kisaanapp.Interface.ResponceLisnter;
@@ -27,6 +40,7 @@ import angiratech.com.kisaanapp.Utility.AppConstants;
 import angiratech.com.kisaanapp.Utility.CheckInternet;
 import angiratech.com.kisaanapp.Utility.MyLog;
 import angiratech.com.kisaanapp.Utility.MyToast;
+import angiratech.com.kisaanapp.Utility.PermissionHelper;
 import angiratech.com.kisaanapp.Volley.VollyRequests;
 
 /**
@@ -43,18 +57,30 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private VollyRequests vollyRequests = new VollyRequests();
     private Button btnLogin, btn_registration;
     android.app.ProgressDialog ProgressDialog;
-
+    private static final int PERMISSION_REQUEST_CODE = 200;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_login);
 
         initView();
         setupToolbar();
 
-
+        Thread background = new Thread() {
+            public void run() {
+                try {
+                    checkPermissions();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    }
+            }
+        };
+        background.start();
     }
+
+
 
     private void setupToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -228,6 +254,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
         }
 
+    }
+    private void checkPermissions() {
+        PermissionHelper.DialogueShow(Login.this, "Grant Permission Access");
     }
 
 }

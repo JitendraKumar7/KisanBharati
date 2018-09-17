@@ -39,6 +39,7 @@ public class AdapterFragmentCategories extends RecyclerView.Adapter<AdapterFragm
     public AdapterFragmentCategories.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view;
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+
         view = layoutInflater.inflate(R.layout.inflator_weather, parent, false);
         return new AdapterFragmentCategories.ViewHolder(view);
     }
